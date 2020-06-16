@@ -13,5 +13,5 @@ dnsmasq_log_query: False
   # - { domain: zone2.domain2, ip: "192.168.2.1" }
 
 #local_hosts: []
-  # - { hostname: host1.zone1.domain1, ip: "192.168.1.1" }
-  # - { hostname: host2.zone2.domain2, ip: "192.168.2.1" }
+  # - { hostname: host1.zone1.domain1, ip: "192.168.1.1", ptrrecord: 1.1.168.192.in-addr.arpa }
+  # - { hostname: host2.zone2.domain2, ip: "192.168.2.1", ptrrecord: 1.1.168.192.in-addr.arpa }
