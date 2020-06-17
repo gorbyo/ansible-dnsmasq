@@ -14,7 +14,7 @@
 
 - name:       add root namservers
   shell:      nmcli connection modify uuid {{ mgmt_uuid.stdout }} +ipv4.dns {{ item }}
-  with_items: '{{ root_dns }}'
+  with_items: '{{ dnsmasq_root_dns }}'
   notify:     set dns-options
 
 - name:       set dns-options

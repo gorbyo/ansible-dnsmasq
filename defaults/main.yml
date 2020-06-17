@@ -1,17 +1,19 @@
 ---
 # defaults file for dnsmasq
 
-mgmt_iface: "{{ansible_default_ipv4.interface}}"
+dnsmasq_mgmt_iface: "{{ansible_default_ipv4.interface}}"
 
-root_dns:
+dnsmasq_root_dns:
   - 8.8.8.8
   - 8.8.4.4
 dnsmasq_log_query: False
 
-#local_dns: []
+dnsmasq_force_config: False
+
+#dnsmasq_local_dns: []
   # - { domain: zone1.domain1, ip: "192.168.1.1" }
   # - { domain: zone2.domain2, ip: "192.168.2.1" }
 
-#local_hosts: []
+#dnsmasq_local_hosts: []
   # - { hostname: host1.zone1.domain1, ip: "192.168.1.1", ptrrecord: 1.1.168.192.in-addr.arpa }
   # - { hostname: host2.zone2.domain2, ip: "192.168.2.1", ptrrecord: 1.1.168.192.in-addr.arpa }
